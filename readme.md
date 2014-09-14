@@ -51,7 +51,7 @@ Quantic Telecom support provides some contracts to implement.
 
 Factories contracts provides a clean way to create models. Concrete implementations need to know how to create a new model instance and how to attach (for comments) a model to another.
 
-* `OpenTicket`: act like a Ticket factory;
+* `OpenTicket`: act like a ticket factory;
 * `WriteComment`: same as `OpenTicket` for comments.
 
 #### Repositories
