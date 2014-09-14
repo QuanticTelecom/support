@@ -1,6 +1,7 @@
 {
     "name": "quantic-telecom/support",
-    "description": "",
+    "description": "Quantic Telecom Support system",
+    "license": "MIT",
     "authors": [
         {
             "name": "Thibaud Dauce",
