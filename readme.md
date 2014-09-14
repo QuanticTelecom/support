@@ -62,6 +62,6 @@ Quantic Telecom support needs repositories to manage database connection:
 
 ### Commands
 
-Laravel Commander provides an easy way to leverage commands and domain events. This package has two commands (and two handlers):
+Laravel Commander (https://github.com/laracasts/Commander) provides an easy way to leverage commands and domain events. This package has two commands (and two handlers):
 * `OpenTicketCommand` & `OpenTicketCommandHandler`: use `OpenTicket` factory to create a new ticket and `TicketRepository` to save this ticket;
 * `WriteCommentCommand` & `WriteCommentCommandHandler`: use `WriteComment` factory to create and attach a new comment to a ticket and then `CommentRepository` to save / persist it.
