@@ -37,6 +37,7 @@ class WriteCommentCommandHandler implements CommandHandler {
     public function handle($command)
     {
         $comment = $this->writeComment->by($command->userId)->withText($command->body)->about($command->ticketId)->get();
+        $this->commentRepository->save($comment);
 
         $this->dispatchEventsFor($this->writeComment);
 
