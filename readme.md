@@ -76,10 +76,10 @@ First, you need to create your models and implement `Ticket` and `Comment` contr
 
 ### Repositories
 
-Then, you need to create one or two repositories and implement both `TicketRepository` and `CommentRepository`.
+Then, you need to create the repositories to implement both `TicketRepository` and `CommentRepository`.
 
 Make sure to bind the interfaces to the concrete class(es) in a service provider for example.
 
 ### Factories
 
-Finally, you must build concrete classes for `OpenTicket` and `WriteComment`
+Finally, you must build concrete classes for `OpenTicket` and `WriteComment`. Just follow the interfaces methods.
