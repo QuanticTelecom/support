@@ -1,3 +1,6 @@
 <?php namespace QuanticTelecom\Support\Contracts;
 
-interface Ticket {}
+interface Ticket {
+
+    public function comments();
+}
