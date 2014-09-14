@@ -26,13 +26,13 @@ Next, update `app/config/app.php` to include a reference to this package's servi
 
 Quantic Telecom support provides two controllers: `QuanticTelecom\Support\Controllers\TicketsController` and `QuanticTelecom\Support\Controllers\CommentsController` with some CRUD's methods.
 
-* TicketsController
-  * create: show create form
-  * store: open a ticket
+* `TicketsController`
+  * `@create`: show create form
+  * `@store`: open a ticket
 
 
-* CommentsController
-  * store: write a new comment
+* `CommentsController`
+  * `@store`: write a new comment
 
 ### Routes
 
@@ -44,24 +44,24 @@ Quantic Telecom support provides some contracts to implement.
 
 #### Models
 
-* Ticket & Comment: meaningless doc blocs contracts;
+* `Ticket` & `Comment`: meaningless doc blocs contracts;
 
 
 #### Factories
 
 Factories contracts provides a clean way to create models. Concrete implementations need to know how to create a new model instance and how to attach (for comments) a model to another.
 
-* OpenTicket: act like a Ticket factory;
-* WriteComment: same as OpenTicket for comments.
+* `OpenTicket`: act like a Ticket factory;
+* `WriteComment`: same as `OpenTicket` for comments.
 
 #### Repositories
 
 Quantic Telecom support needs repositories to manage database connection:
-* TicketRepository: get and save tickets;
-* CommentRepository: save a comment.
+* `TicketRepository`: get and save tickets;
+* `CommentRepository`: save a comment.
 
 ### Commands
 
 Laravel Commander provides an easy way to leverage commands and domain events. This package has two commands (and two handlers):
-* OpenTicketCommand & OpenTicketCommandHandler: use OpenTicket factory to create a new ticket and TicketRepository to save this ticket;
-* WriteCommentCommand & WriteCommentCommandHandler: use WriteComment factory to create and attach a new comment to a ticket and then CommentRepository to save / persist it.
+* `OpenTicketCommand` & `OpenTicketCommandHandler`: use `OpenTicket` factory to create a new ticket and `TicketRepository` to save this ticket;
+* `WriteCommentCommand` & `WriteCommentCommandHandler`: use `WriteComment` factory to create and attach a new comment to a ticket and then `CommentRepository` to save / persist it.
