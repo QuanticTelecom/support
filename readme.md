@@ -20,7 +20,7 @@ Next, update `app/config/app.php` to include a reference to this package's servi
 ]
 ```
 
-## Usage
+## Package information
 
 ### Controllers
 
@@ -65,3 +65,15 @@ Quantic Telecom support needs repositories to manage database connection:
 Laravel Commander (https://github.com/laracasts/Commander) provides an easy way to leverage commands and domain events. This package has two commands (and two handlers):
 * `OpenTicketCommand` & `OpenTicketCommandHandler`: use `OpenTicket` factory to create a new ticket and `TicketRepository` to save this ticket;
 * `WriteCommentCommand` & `WriteCommentCommandHandler`: use `WriteComment` factory to create and attach a new comment to a ticket and then `CommentRepository` to save / persist it.
+
+## Usage
+
+### Models
+
+First, you need to create your models and implement `Ticket` and `Comment` contracts.
+
+### Repositories
+
+Then, you need to create one or two repositories and implement both `TicketRepository` and `CommentRepository`.
+
+Make sure to bind the interfaces to the concrete class(es) in a service provider for example.
